@@ -14,13 +14,10 @@ spec:
         spec:
           containers:
             - name: clear-sessions-container
-              image: alex662/django_app:latest
+              image: alex662/django_app:minikube
               imagePullPolicy: IfNotPresent
               command: ["python", "manage.py", "clearsessions"]
               envFrom:
                 - secretRef:
                     name: django-app-secret
           restartPolicy: OnFailure
-
-
-
