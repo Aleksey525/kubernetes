@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: django-migrate-job
+  namespace: <namespace>
+spec:
+  template:
+    spec:
+      containers:
+        - name: django-migrate-container
+          image: alex662/django_app:5ee9612
+          imagePullPolicy: IfNotPresent
+          command: ["python", "manage.py", "migrate"]
+          envFrom:
+            - secretRef:
+                name: django-app-secret
+      restartPolicy: OnFailure
