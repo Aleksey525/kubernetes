@@ -15,7 +15,7 @@ spec:
         spec:
           containers:
             - name: clear-sessions-container
-              image: alex662/django_app:minikube
+              image: alex662/django_app:5ee9612
               imagePullPolicy: IfNotPresent
               command: ["python", "manage.py", "clearsessions"]
               envFrom:

@@ -14,7 +14,7 @@ spec:
         app: django-app
     spec:
       containers:
-        - image: alex662/django_app:minikube
+        - image: alex662/django_app:5ee9612
           name: django-app
           ports:
             - containerPort: 80
