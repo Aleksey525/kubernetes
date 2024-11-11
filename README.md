@@ -185,6 +185,10 @@ kubectl apply -f ./yc-sirius-prod/django-service.yaml
 ```
 
 ```
+kubectl apply -f ./yc-sirius-prod/django-ingress.yaml
+```
+
+```
 kubectl apply -f ./yc-sirius-prod/django-migrate-job.yaml
 ```
 
